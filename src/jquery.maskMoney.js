@@ -24,6 +24,9 @@
             },
 		methods = {
         destroy: function () {
+            
+            $(this).val($(this).maskMoney('unmasked').get(0));
+            
             $(this).unbind(".maskMoney");
 
             if ($.browser.msie) {
